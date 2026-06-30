@@ -1,0 +1,59 @@
+*** Basic ***
+pwd : Current Directory
+ls: List of Files (ls -la = shows all list of files in long format, even the hidden ones)
+cd : Change Directory (cd + enter = goes to Users, cd .. = goes to parent dir)              
+touch: Create new Files
+cat : Show File Content             
+vim : Edit Mode in Terminal (:q = quit, i = insert mode, esc key = escape current mode, :wq = write and quit) 
+cp : Copy File (cp File_A File_B  or  cp /Users/.../A /Users/.../B)
+mv : Move files (mv File_A /path/to/dest/) Can move multiple files + Can rename files (mv File_A File_B)
+mkdir : Make New Directory 
+rm : deletes file (rm File_A = delete File_A, rm -r Directory B = delete the directory and it's files aka recursive deletion)
+sudo : Gives super user (aka admin) abilities to override default settings and edit things that you normally can't (Anything that requires more access rights)
+date : Gives date 
+q or ctrl C  Terminate/interrput current running code in loop
+crtl z : Suspend whatever code/program running and put it into the background
+bg : Sends code running to background
+fg : Sends code running to foreground 
+python3 file_name.py & : Runs the code in the backgorund from the start
+pip freeze > requirements.txt : makes a document of dependencies of your project
+brew update & brew upgrade : Shows outdated versions of installations & Updates them 
+which file_or_tool_name : Shows the directory/path of the tool/file
+code . : opens the current directory in vs code
+tldr command_name : Shows you a tldr of the command 
+sm_code > file_name.txt : Records/logs whatever code you ran into the new txt file you are creating ( 2> instead of >  : only records the error)
+                          (Use >> instead of > then the contents are appended to the existing file rather than overwriting it)
+                          (you can redirect things to /dev/null, which sends content to "nothing"/"nowhere")
+sm_code > file_name.txt 2>&1 : Records all output and the errors in to the new txt file (aka redirecting)
+cat file_name | grep keyword : Can search for lines containing specific keyword from desired file
+                               (e.g. cat test.txt | grep hello , ls | grep .txt)                               
+ls -la : gives you all file with details and you can see that each file contains information that looks like "-rw-r--r--@" 
+         These are the file permissions or permission bits. Composed of 5 parts (11 characters).
+         The first character defines file type (e.g. - = regular file , d = directory , l = link)    
+         Next 3 characters are the readability = r, writability = w, executability = x of the file owner  
+         Following 3 characters are rwx-ability of the members in the group 
+         The 3 characters after are rwx-ability of everyone else
+         The last 1 charcter is macOS-specific and it shows additional metadata beyond the standard Unix permissions:
+            + = file has Access Control List which means that file provide more detailed permissions than the traditional owner/group/other model
+            @ = file has extended attributes (extra metadata attached to the file)
+chmod 0 file_name : Removes all permisions from the file (Permission bit "-----------")
+chmod 777 file_name : Max all permissions of the file (Permission bit "-rwxrwxrwx@")
+chmod +r/w/x file_name : Adds specific permission (r or w or x) to the file
+chown "someone" file_name : Changes the owner of the file to the desired person (Usually requires sudo)
+chgrp '' 
+top / htop / btop : Get a nice interactive view of processes on your system (Right most is the most modern & Userfirendly)
+For btop -> select process + k : Kills the process
+reboot : Reboots your system
+shutdown -h now : Shuts down the system immediately
+lsblk : List all the block devices
+diskutil list : Lists disks and partitions
+df -h : Shows detailed disk usage
+du -sh ~/* : View storage by folder
+mount : See all mounted volumes
+Environment Variable : variable that you can use like a global variable during the current session
+   export variable_name=variable : Saves the new environmental variable, which can be used throughout (e.g. api-key)
+      ex) export NAME=andrew then echo $NAME gives andrew
+*** Git ***
+git add file_name : stage changes made in the file (git add . or git add -a = stage all changes made)
+git stash : stashes the changes made (git stash pop = reverts the stash)
+

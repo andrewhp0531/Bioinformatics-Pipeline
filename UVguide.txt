@@ -1,0 +1,21 @@
+uv init file_name = uv creates new dir for your project (If dir alr created but not through uv, then just cd into the dir and do uv init for uv to set it up)
+uv add package_name = uv automatically adds the desired packages to your project's venv and also records it in toml (the uv.lock file recorde even the exact versions of the packages installed including sub-dependencies) 
+uv trees = Visulaizes tree of which parts of projects depends on which part/packages
+uv pip list = Shows the installed packages of the project 
+uv sync = Using the uv lock file, automatically "syncs" the dependencies needed for the project and creates venv
+uv init can also convert pip-used projects to uv venv projects, then you can add packages needed 
+uv add -r filename_.txt = parses the packages listed in the file and creates venv with it
+uv tool install tool_name = Allows to add tools/linters/formatters/etc that you would like to install once and use across your system/projects
+uv tool uninstall tool_name = uninstalls the tool
+uv run ruff_command = temporarily installs ruff to execute checks/ruff commands and then erases it (works even when ruff not installed in system)
+uvx = uv tool run = Runs a tool in an isolated temporary environment (not your project venv). Useful for one-off commands without affecting your project
+uv tool list = check the list of tools installed
+uv tool upgrade --all = Updates all the tools installed (Can choose specific ones)
+
+**Ruff**
+ruff check = scans your code and lists problems 
+ruff check --fix = instantly cleans up and repairs any errors it is safe to fix automatically
+ruff format = automatically fixes your spacing, line wraps, and quotes to match professional standards
+ruff any_command --diff = Shows the changes that ruff wants to make
+
+
